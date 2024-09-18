@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace IbrahimBougaoua\FilaSortable\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilaSortableCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filasortable';
 
     public $description = 'My command';
 
