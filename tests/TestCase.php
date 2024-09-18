@@ -2,9 +2,9 @@
 
 namespace IbrahimBougaoua\FilaSortable\Tests;
 
+use IbrahimBougaoua\FilaSortable\FilaSortableServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use IbrahimBougaoua\FilaSortable\FilaSortableServiceProvider;
 
 class TestCase extends Orchestra
 {

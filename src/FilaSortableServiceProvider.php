@@ -2,9 +2,9 @@
 
 namespace IbrahimBougaoua\FilaSortable;
 
+use IbrahimBougaoua\FilaSortable\Commands\FilaSortableCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use IbrahimBougaoua\FilaSortable\Commands\FilaSortableCommand;
 
 class FilaSortableServiceProvider extends PackageServiceProvider
 {
