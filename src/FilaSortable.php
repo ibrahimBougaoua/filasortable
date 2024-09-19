@@ -1,6 +1,7 @@
 <?php
 
 namespace IbrahimBougaoua\FilaSortable;
+
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
@@ -11,8 +12,8 @@ use IbrahimBougaoua\FilaSortable\Services\SortOrderService;
 use Illuminate\Support\Facades\Blade;
 use Livewire\Livewire;
 
-class FilaSortable {
-    
+class FilaSortable
+{
     public function __construct()
     {
         $this->registerSortableButtonComponent();
@@ -22,19 +23,18 @@ class FilaSortable {
 
     public function loadAssets()
     {
-        if(app(SortOrderService::class)->canAssetRegister())
-        {
+        if (app(SortOrderService::class)->canAssetRegister()) {
             FilamentAsset::register(
                 [
-                    Css::make('custom-css', __DIR__ . '/../resources/css/custom.css'),
+                    Css::make('custom-css', __DIR__.'/../resources/css/custom.css'),
                 ],
                 package: 'ibrahimbougaoua/filasortable'
             );
-            
+
             FilamentAsset::register(
                 [
-                    Js::make('sortable-min', __DIR__ . '/../resources/js/Sortable.min.js'),
-                    Js::make('custom-js', __DIR__ . '/../resources/js/custom.js'),
+                    Js::make('sortable-min', __DIR__.'/../resources/js/Sortable.min.js'),
+                    Js::make('custom-js', __DIR__.'/../resources/js/custom.js'),
                 ],
                 package: 'ibrahimbougaoua/filasortable'
             );
@@ -43,8 +43,7 @@ class FilaSortable {
 
     public function registerSortableButtonComponent()
     {
-        if (class_exists(\IbrahimBougaoua\FilaSortable\Livewire\SortableActionComponent::class)) 
-        {
+        if (class_exists(\IbrahimBougaoua\FilaSortable\Livewire\SortableActionComponent::class)) {
             Livewire::component('sortable-action-component', \IbrahimBougaoua\FilaSortable\Livewire\SortableActionComponent::class);
         }
 
@@ -56,13 +55,12 @@ class FilaSortable {
 
     public function registerAlertComponent()
     {
-        if (class_exists(\IbrahimBougaoua\FilaSortable\Livewire\MessageComponent::class)) 
-        {
+        if (class_exists(\IbrahimBougaoua\FilaSortable\Livewire\MessageComponent::class)) {
             Livewire::component('message-component', \IbrahimBougaoua\FilaSortable\Livewire\MessageComponent::class);
         }
 
         FilamentView::registerRenderHook(
-            PanelsRenderHook::RESOURCE_PAGES_LIST_RECORDS_TABLE_BEFORE ,
+            PanelsRenderHook::RESOURCE_PAGES_LIST_RECORDS_TABLE_BEFORE,
             fn (): string => Blade::render('@livewire(\'message-component\')'),
         );
     }

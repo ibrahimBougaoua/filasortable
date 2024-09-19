@@ -2,8 +2,8 @@
 
 namespace IbrahimBougaoua\FilaSortable\Livewire\Traits;
 
-use Illuminate\Support\Facades\DB;
 use IbrahimBougaoua\FilaSortable\Traits\SortOrder;
+use Illuminate\Support\Facades\DB;
 
 trait SortOrderAction
 {
@@ -11,14 +11,11 @@ trait SortOrderAction
 
     public function sort()
     {
-        if ($this->hasSortOrder) 
-        {
+        if ($this->hasSortOrder) {
             SortOrder::removeSortOrderColumn($this->currentModel);
 
             session()->flash('error', __('filasortable::filasortable.Sortable is disactivated successfully !'));
-        } 
-        else 
-        {
+        } else {
             SortOrder::checkAndAddSortOrderColumn($this->currentModel);
 
             session()->flash('success', __('filasortable::filasortable.Sortable is activated successfully !'));
@@ -29,11 +26,11 @@ trait SortOrderAction
 
     public function updateSortOrder($itemIds)
     {
-        if(!$this->hasSortOrder)
+        if (! $this->hasSortOrder) {
             return;
+        }
 
-        if (empty($itemIds)) 
-        {
+        if (empty($itemIds)) {
             return;
         }
 
@@ -42,20 +39,19 @@ trait SortOrderAction
 
         $caseStatement = 'CASE id';
         $bindings = [];
-        
-        foreach ($itemIds as $index => $itemId) 
-        {
+
+        foreach ($itemIds as $index => $itemId) {
             $caseStatement .= ' WHEN ? THEN ?';
             $bindings[] = $itemId;
             $bindings[] = $index + 1;
         }
 
         $caseStatement .= ' END';
-        
+
         $idPlaceholders = implode(',', array_fill(0, count($itemIds), '?'));
         $bindings = array_merge($bindings, $itemIds);
 
-        $sql = "UPDATE " . $tableName . " SET sort_order = {$caseStatement} WHERE id IN ({$idPlaceholders})";
+        $sql = 'UPDATE '.$tableName." SET sort_order = {$caseStatement} WHERE id IN ({$idPlaceholders})";
 
         DB::statement($sql, $bindings);
     }

@@ -20,17 +20,15 @@ class FilaSortableServiceProvider extends PackageServiceProvider
             ->name('filasortable')
             ->hasAssets();
 
-        if (file_exists($package->basePath('/../resources/views'))) 
-        {
+        if (file_exists($package->basePath('/../resources/views'))) {
             $package->hasViews();
         }
-        
-        if (file_exists($package->basePath('/../resources/lang'))) 
-        {
+
+        if (file_exists($package->basePath('/../resources/lang'))) {
             $package->hasTranslations();
         }
     }
-    
+
     public function packageBooted(): void
     {
         app(FilaSortable::class);

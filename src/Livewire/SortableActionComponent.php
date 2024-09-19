@@ -12,11 +12,11 @@ class SortableActionComponent extends Component
     use CurrentModelName;
     use SortOrder;
     use SortOrderAction;
-    
+
     public $currentModel;
-    
+
     public function mount()
-    { 
+    {
         $this->currentModel = CurrentModelName::getModelClassFromRoute();
         $this->hasSortOrder = SortOrder::isSortOrderExist($this->currentModel);
     }
