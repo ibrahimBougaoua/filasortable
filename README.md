@@ -1,19 +1,13 @@
-# This is my package filasortable
+# Filasortable package for reorderable drag-and-drop table.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ibrahimbougaoua/filasortable.svg?style=flat-square)](https://packagist.org/packages/ibrahimbougaoua/filasortable)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ibrahimbougaoua/filasortable/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ibrahimbougaoua/filasortable/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ibrahimbougaoua/filasortable/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ibrahimbougaoua/filasortable/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ibrahimbougaoua/filasortable.svg?style=flat-square)](https://packagist.org/packages/ibrahimbougaoua/filasortable)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Filasortable package for reorderable drag-and-drop table for modern browsers and touch devices, just register the plugin after that you will see new button appear at the header of table where you can enable and disable the sort option for the current table.
 
-## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/filasortable.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/filasortable)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -21,26 +15,6 @@ You can install the package via composer:
 
 ```bash
 composer require ibrahimbougaoua/filasortable
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filasortable-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filasortable-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
 ```
 
 Optionally, you can publish the views using
@@ -51,9 +25,14 @@ php artisan vendor:publish --tag="filasortable-views"
 
 ## Usage
 
+Register the plugin after that you will see new button appear at the header of table where you can enable and disable the sort option for the current table.
+
 ```php
-$filaSortable = new IbrahimBougaoua\FilaSortable();
-echo $filaSortable->echoPhrase('Hello, IbrahimBougaoua!');
+use IbrahimBougaoua\FilaSortable\FilaSortablePlugin;
+
+->plugins([
+    FilaSortablePlugin::make()
+]);
 ```
 
 ## Testing
@@ -61,10 +40,6 @@ echo $filaSortable->echoPhrase('Hello, IbrahimBougaoua!');
 ```bash
 composer test
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
@@ -76,7 +51,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Ibrahim Bougaoua](https://github.com/Ibrahim Bougaoua)
+- [Ibrahim Bougaoua](https://github.com/IbrahimBougaoua)
+- [SortableJS](https://github.com/SortableJS/Sortable)
 - [All Contributors](../../contributors)
 
 ## License
