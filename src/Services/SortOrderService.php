@@ -1,4 +1,5 @@
 <?php
+
 namespace IbrahimBougaoua\FilaSortable\Services;
 
 use IbrahimBougaoua\FilaSortable\Scopes\SortOrderScope;
@@ -9,7 +10,7 @@ class SortOrderService
 {
     use CurrentModelName;
     use SortOrder;
-    
+
     public $currentModel;
 
     public function __construct()
@@ -22,14 +23,15 @@ class SortOrderService
         return SortOrder::isSortOrderExist($this->currentModel);
     }
 
-    public function getModelClass() : string
+    public function getModelClass(): string
     {
         return $this->currentModel;
     }
 
-    public function sortAddGlobalScope() : void
+    public function sortAddGlobalScope(): void
     {
-        if( $this->currentModel )
-            $this->currentModel::addGlobalScope(new SortOrderScope());
+        if ($this->currentModel) {
+            $this->currentModel::addGlobalScope(new SortOrderScope);
+        }
     }
 }

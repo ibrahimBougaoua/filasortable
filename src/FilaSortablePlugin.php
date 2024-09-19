@@ -20,7 +20,7 @@ class FilaSortablePlugin implements Plugin
 
     public function register(Panel $panel): void
     {
-        // 
+        //
     }
 
     public function boot(Panel $panel): void
@@ -30,8 +30,7 @@ class FilaSortablePlugin implements Plugin
 
     public function sortable()
     {
-        if(app(SortOrderService::class)->canAssetRegister())
-        {
+        if (app(SortOrderService::class)->canAssetRegister()) {
             app(SortOrderService::class)->sortAddGlobalScope();
         }
     }

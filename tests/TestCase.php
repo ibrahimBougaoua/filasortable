@@ -2,9 +2,8 @@
 
 namespace IbrahimBougaoua\FilaSortable\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use IbrahimBougaoua\FilaSortable\FilaSortableServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
@@ -18,7 +17,7 @@ class TestCase extends Orchestra
     {
         return [
             FilaSortableServiceProvider::class,
-			\Livewire\LivewireServiceProvider::class,
+            \Livewire\LivewireServiceProvider::class,
         ];
     }
 }
