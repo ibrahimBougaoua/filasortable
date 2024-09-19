@@ -34,7 +34,6 @@ class FilaSortable {
             FilamentAsset::register(
                 [
                     Js::make('sortable-min', __DIR__ . '/../resources/js/Sortable.min.js'),
-                    Js::make('custom-js', __DIR__ . '/../resources/js/custom.js'),
                 ],
                 package: 'ibrahimbougaoua/filasortable'
             );
