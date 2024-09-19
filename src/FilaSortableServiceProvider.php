@@ -4,10 +4,11 @@ namespace IbrahimBougaoua\FilaSortable;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use IbrahimBougaoua\FilaSortable\Commands\FilaSortableCommand;
 
 class FilaSortableServiceProvider extends PackageServiceProvider
 {
+    public static string $name = 'filasortable';
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -17,9 +18,21 @@ class FilaSortableServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('filasortable')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_filasortable_table')
-            ->hasCommand(FilaSortableCommand::class);
+            ->hasAssets();
+
+        if (file_exists($package->basePath('/../resources/views'))) 
+        {
+            $package->hasViews();
+        }
+        
+        if (file_exists($package->basePath('/../resources/lang'))) 
+        {
+            $package->hasTranslations();
+        }
+    }
+    
+    public function packageBooted(): void
+    {
+        app(FilaSortable::class);
     }
 }
