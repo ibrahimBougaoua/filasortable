@@ -33,8 +33,6 @@
                                 </p>
                             </div>
                         </div>
-        
-                        <!-- Close Button -->
                         <button @click="showAlert = false" class="text-teal-500 h-9 w-9 shadow-lg rounded-full bg-white hover:text-teal-700 font-bold text-lg">
                             &times;
                         </button>
