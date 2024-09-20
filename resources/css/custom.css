@@ -26,24 +26,24 @@ tbody tr {
     background-color: #e74c3c;
 }
 .custom-alert {
-    background-color: #f0fdfa; /* Light teal background */
-    border-left: 4px solid #2c7a7b; /* Dark teal border */
-    border-radius: 0.375rem; /* Rounded corners */
-    color: #234e52; /* Text color */
-    padding: 1rem; /* Padding */
+    background-color: #f0fdfa;
+    border-left: 4px solid #2c7a7b;
+    border-radius: 0.375rem;
+    color: #234e52;
+    padding: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
 }
 .custom-alert .custom-alert-icon {
-    fill: #2c7a7b; /* Teal icon color */
-    height: 1.5rem; /* Icon size */
+    fill: #2c7a7b;
+    height: 1.5rem;
     width: 1.5rem;
-    margin-right: 0.75rem; /* Margin between icon and text */
+    margin-right: 0.75rem;
 }
 .custom-alert .custom-alert-title {
-    font-weight: 600; /* Bold title */
+    font-weight: 600;
 }
 .custom-alert .custom-alert-message {
-    font-size: 0.875rem; /* Small text */
+    font-size: 0.875rem;
 }
 .custom-alert .close-btn {
     background: transparent;
@@ -55,27 +55,27 @@ tbody tr {
     transition: color 0.3s ease;
 }
 .custom-alert .close-btn:hover {
-    color: #1d4044; /* Darker teal on hover */
+    color: #1d4044;
 }
 .custom-danger-alert {
-    background-color: #ffe5e5; /* Light red background */
-    border-left: 4px solid #e53e3e; /* Dark red border */
-    border-radius: 0.375rem; /* Rounded corners */
-    color: #9b2c2c; /* Dark red text color */
-    padding: 1rem; /* Padding */
+    background-color: #ffe5e5;
+    border-left: 4px solid #e53e3e;
+    border-radius: 0.375rem;
+    color: #9b2c2c;
+    padding: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
 }
 .custom-danger-alert .custom-alert-icon {
-    fill: #e53e3e; /* Red icon color */
-    height: 1.5rem; /* Icon size */
+    fill: #e53e3e;
+    height: 1.5rem;
     width: 1.5rem;
-    margin-right: 0.75rem; /* Margin between icon and text */
+    margin-right: 0.75rem;
 }
 .custom-danger-alert .custom-alert-title {
-    font-weight: 600; /* Bold title */
+    font-weight: 600;
 }
 .custom-danger-alert .custom-alert-message {
-    font-size: 0.875rem; /* Small text */
+    font-size: 0.875rem;
 }
 .d-none {
     display: none !important;
