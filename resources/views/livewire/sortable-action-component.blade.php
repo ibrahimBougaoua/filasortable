@@ -29,25 +29,15 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var el = document.querySelector('.fi-ta-table tbody');
-
         var sortable = Sortable.create(el, {
-            animation: 200,  // Smooth animation for sorting
-            handle: '.fi-ta-row',  // Define draggable row
-            ghostClass: 'sortable-ghost',  // Ghost element class
-            chosenClass: 'sortable-chosen',  // Chosen (dragging) row class
-
+            animation: 200,
+            handle: '.fi-ta-row',
+            ghostClass: 'sortable-ghost',
+            chosenClass: 'sortable-chosen',
             onEnd: function (evt) {
                 evt.oldValue = el.children[evt.oldIndex].querySelector('.fi-checkbox-input').value;
-                // Capture the new value after moving, using the checkbox value
                 evt.newValue = el.children[evt.newIndex].querySelector('.fi-checkbox-input').value;
-
-                console.log('Row moved from', evt.oldValue, 'to', evt.newValue);
-
-                // Get the updated item values for the current page using the checkbox value
                 let itemValues = Array.from(el.children).map(row => row.querySelector('.fi-checkbox-input').value);
-                console.log(itemValues);
-
-                // Call Livewire to update the order with the old and new values and the array of item values
                 @this.call('updateSortOrder', itemValues);
             }
         });
