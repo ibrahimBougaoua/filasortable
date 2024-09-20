@@ -1,4 +1,3 @@
-/* Style for the row currently being dragged */
 .sortable-chosen {
     background-color: #f8fafc;
     opacity: 0.8;
@@ -6,37 +5,26 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-/* Style for the ghost row (shows where the row will go) */
 .sortable-ghost {
     background-color: #d1d5db;
     opacity: 0.5;
     border: 2px dashed #94a3b8;
 }
-
-/* Smooth animation for row reordering */
 .sortable-animation {
     transition: all 0.2s ease;
 }
-
-/* Row hover effect for better feedback */
 tbody tr:hover {
     background-color: #f0f4f8;
 }
-
-/* Optional: Add a transition to smooth out the hover effect */
 tbody tr {
     transition: background-color 0.3s ease;
 }
-
 .bg-nephritis {
     background-color: #27ae60;
 }
 .bg-alizarin {
     background-color: #e74c3c;
 }
-
-/* Custom style for the alert box */
 .custom-alert {
     background-color: #f0fdfa; /* Light teal background */
     border-left: 4px solid #2c7a7b; /* Dark teal border */
@@ -45,22 +33,18 @@ tbody tr {
     padding: 1rem; /* Padding */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
 }
-
 .custom-alert .custom-alert-icon {
     fill: #2c7a7b; /* Teal icon color */
     height: 1.5rem; /* Icon size */
     width: 1.5rem;
     margin-right: 0.75rem; /* Margin between icon and text */
 }
-
 .custom-alert .custom-alert-title {
     font-weight: 600; /* Bold title */
 }
-
 .custom-alert .custom-alert-message {
     font-size: 0.875rem; /* Small text */
 }
-
 .custom-alert .close-btn {
     background: transparent;
     border: none;
@@ -70,12 +54,9 @@ tbody tr {
     cursor: pointer;
     transition: color 0.3s ease;
 }
-
 .custom-alert .close-btn:hover {
     color: #1d4044; /* Darker teal on hover */
 }
-
-/* Custom style for the danger alert */
 .custom-danger-alert {
     background-color: #ffe5e5; /* Light red background */
     border-left: 4px solid #e53e3e; /* Dark red border */
@@ -84,22 +65,18 @@ tbody tr {
     padding: 1rem; /* Padding */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
 }
-
 .custom-danger-alert .custom-alert-icon {
     fill: #e53e3e; /* Red icon color */
     height: 1.5rem; /* Icon size */
     width: 1.5rem;
     margin-right: 0.75rem; /* Margin between icon and text */
 }
-
 .custom-danger-alert .custom-alert-title {
     font-weight: 600; /* Bold title */
 }
-
 .custom-danger-alert .custom-alert-message {
     font-size: 0.875rem; /* Small text */
 }
-
 .d-none {
     display: none !important;
 }
