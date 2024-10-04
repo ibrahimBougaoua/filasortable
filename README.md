@@ -7,6 +7,10 @@
 
 Filasortable package for reorderable drag-and-drop table for modern browsers and touch devices, just register the plugin  <br />after that you will see new button appear at the header of table where you can enable and disable the sort option for the current table.
 
+## Support us
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/ibrahimbougaoua)
+
 <a href="https://www.youtube.com/@IbrahimBougaoua" target="_blank">Explanation At Youtube</a>
 ## Just press the enable button and enjoy.
 
